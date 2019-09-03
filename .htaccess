@@ -1,1 +1,8 @@
-Options -Indexes
+# for testing
+php_flag display_errors on
+# Beautify URL
+<IFModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^$ public/ [L]
+    RewriteRule (.*) public/$1 [L]
+</IFModule>
